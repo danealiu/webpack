@@ -1,0 +1,11 @@
+webpack上插件扩展，给打包好的js css后自动加上随机数
+
+webpack上用：
+ plugins: [
+        new WebpackDynamicHash(__dirname, ['activity'])
+    ]
+
+js中用
+var appSrc = getJsPath + 'activity.js' + '?apphash';
+
+代码会自动将apphash标识替换成随机数
